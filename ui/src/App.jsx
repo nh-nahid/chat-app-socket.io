@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ChatRoom from "./components/Chatroom";
 
 function App() {
   const [username, setUsername] = useState("");
@@ -45,7 +46,7 @@ function App() {
           </>
         ) : (
           <div className="text-center text-xl font-medium animate-[popIn_0.4s_ease-out]">
-            Connected
+            <ChatRoom username={username} room={room}/>
           </div>
         )}
       </div>
